@@ -1,3 +1,5 @@
+This is the backend of a face-recognition app, incorporating user managemnet and ML, implemented with Node.js and Postgresql
+
 1. Clone this repo
 2. Run npm install
 3. Run npm start
