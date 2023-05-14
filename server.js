@@ -8,13 +8,14 @@ import handleRegister from './controllers/register.js';
 import handleProfileGet from './controllers/profile.js';
 import { handleImageUrl , handleImage } from './controllers/image.js';
 
+// ENTER YOUR DB CONNECTION HERE
 const db = knex({
 	client: 'pg',
 	connection: {
-		host: YOUR DB HOST,
-		user: '',
-		password: '',
-		database: YOUR DB NAME
+		host: process.env.DB_HOST,
+		user: process.env.DB_NAME,
+		password: process.env.DB_PASSWORD,
+		database: process.env.DB_NAME
 	}
 })
 

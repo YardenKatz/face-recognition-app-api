@@ -1,6 +1,6 @@
 const clarifaiRequestOptions = (imageUrl) => {
 	// Your PAT (Personal Access Token) can be found in the portal under Authentification
-    const PAT = YOUR PAT GOES HERE;
+    const PAT = 'cc08868814e548639357740919a84e97';
     const USER_ID = 'eza36f2gyx3k';       
     const APP_ID = 'my-first-application';
     const MODEL_ID = 'face-detection';   
