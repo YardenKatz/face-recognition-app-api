@@ -6,7 +6,7 @@ import bcrypt from 'bcrypt';
 import handleSignin from './controllers/signin.js';
 import handleRegister from './controllers/register.js';
 import handleProfileGet from './controllers/profile.js';
-import handleImage from './controllers/image.js';
+import { handleImageUrl , handleImage } from './controllers/image.js';
 
 const db = knex({
 	client: 'pg',
@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
 app.post('/signin', (req, res) => { handleSignin(req, res, db, bcrypt)})
 app.post('/register', (req, res) => { handleRegister(req, res, db, bcrypt, saltRounds)})
 app.get('/profile/:id', (req, res) => { handleProfileGet(req, res, db)})
+app.post('/imageurl', (req, res) => { handleImageUrl(req, res)})
 app.put('/image', (req, res) => { handleImage(req, res, db)})
 
 app.listen(3000, ()=> {
