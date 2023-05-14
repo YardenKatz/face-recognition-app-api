@@ -11,10 +11,10 @@ import { handleImageUrl , handleImage } from './controllers/image.js';
 const db = knex({
 	client: 'pg',
 	connection: {
-		host: '127.0.0.1',
+		host: YOUR DB HOST,
 		user: '',
 		password: '',
-		database: 'smart-brain'
+		database: YOUR DB NAME
 	}
 })
 
