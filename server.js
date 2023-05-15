@@ -9,6 +9,8 @@ import handleProfileGet from './controllers/profile.js';
 import { handleImageUrl , handleImage } from './controllers/image.js';
 
 // ENTER YOUR DB CONNECTION HERE
+console.log('*** DB_NAME: ', process.env.DB_NAME)
+
 const db = knex({
 	client: 'pg',
 	connection: {
