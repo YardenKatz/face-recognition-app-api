@@ -20,7 +20,9 @@ const db = knex({
 		user: process.env.DB_NAME,
 		password: process.env.DB_PASSWORD,
 		database: process.env.DB_NAME,
-		ssl: true
+		ssl: {
+			rejectUnauthorized: false
+		  }
 	}
 })
 
