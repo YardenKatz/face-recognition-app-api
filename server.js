@@ -16,6 +16,7 @@ console.log('*** DB_USER: ', process.env.DB_USER)
 const db = knex({
 	client: 'pg',
 	connection: {
+		connectionString: process.env.DB_CONNECTION_STRING,
 		host: process.env.DB_HOST,
 		user: process.env.DB_NAME,
 		port: 5432,
