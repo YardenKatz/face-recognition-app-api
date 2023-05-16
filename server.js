@@ -13,16 +13,15 @@ console.log('*** DB_NAME: ', process.env.DB_NAME)
 console.log('*** DB_HOST: ', process.env.DB_HOST)
 console.log('*** DB_USER: ', process.env.DB_USER)
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
-
 const db = knex({
 	client: 'pg',
 	connection: {
 		host: process.env.DB_HOST,
 		user: process.env.DB_NAME,
-		password: 'f8vX8wGxlpYRLFoJZG',
+		port: 5432,
+		password: process.env.DB_PASSWORD,
 		database: process.env.DB_NAME,
-		ssl: true
+		ssl: { rejectUnauthorized: false }
 	}
 })
 
