@@ -1,5 +1,6 @@
-import { json } from 'express';
+import json from 'express';
 import clarifaiRequestOptions from '../config/ClarifaiConfig.js';
+import fetch from 'node-fetch';
 
 const handleImageUrl = (req, res) => {
 	const { imageUrl } = req.body 
